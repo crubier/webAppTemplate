@@ -1,0 +1,137 @@
+// MIXINS
+ 
+vendor(prop, args)
+  -webkit-{prop} args
+  -moz-{prop} args
+  -o-{prop} args
+  {prop} args
+ 
+animation()
+  vendor('animation', arguments)
+ 
+border-radius()
+  vendor('border-radius', arguments)
+ 
+border-top-radius() 
+  vendor('border-top-left-radius', arguments)
+  vendor('border-top-right-radius', arguments)
+ 
+border-top-radius() 
+  vendor('border-bottom-left-radius', arguments)
+  vendor('border-bottom-right-radius', arguments)
+ 
+linear-gradient(start_color, end_color, start = left top, end = left bottom)
+  mozstart = top if start = left top
+  background start_color
+  background -moz-linear-gradient(mozstart, start_color 0%, end_color 100%)
+  background -webkit-gradient(linear, start, end, color-stop(0%, start_color), color-stop(100%, end_color))
+  -webkit-background-origin padding-box
+ 
+background-clip()
+  vendor('background-clip', arguments)
+ 
+box-shadow() 
+  -moz-box-shadow arguments
+  -webkit-box-shadow arguments
+  box-shadow arguments
+ 
+box(orient, pack, align) 
+  display -webkit-box
+  display -moz-box
+  display box
+  vendor('box-orient', orient)
+  vendor('box-pack', pack)
+  vendor('box-align', align)
+  vendor('box-lines', multiple)
+ 
+box_flex()
+  vendor('box-flex', arguments)
+ 
+text-fill-color()
+  vendor('text-fill-color', arguments)
+ 
+transition()
+  vendor('transition', arguments)
+ 
+transform()
+  vendor('transform', arguments)
+
+body
+  // font-size 20px
+  font-family "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif
+  font-weight 300
+  color #ffffff
+  // linear-gradient(rgba(255,255,129,1),rgba(255,255,0,1),)
+  // linear-gradient(#15A211,#158211,top)
+  background #159211
+  overflow auto
+
+
+a.button
+  border-radius(5px)
+
+button
+  background #156211
+  width:80px
+  border-radius(5px)
+  border-width 0px
+  text-align center
+
+
+input
+  background #156211
+  width:40px
+  text-align center
+  border-radius(5px)
+  border-width 0px
+
+form
+  // display inline-block
+  width 500px
+  // margin 10px
+  padding 10px
+  text-align right
+
+.configurator
+  // float : right
+
+.rouletteApp
+  overflow auto
+  background #0000FF
+
+div.absolute
+  position absolute
+  overflow auto
+  // background #00FF00
+
+// div.absolute img
+//   // position absolute
+//   // top 0px
+//   // left 0px
+//   max-width 100% 
+//   // max-height 100%
+//   margin auto
+//   padding auto
+//   display block
+
+// div.absolute svg
+//   // z-index 1
+//   // position absolute
+//   // top 0px
+//   // left 0px
+//   max-width 100% 
+//   // max-height 100%
+//   margin auto
+//   padding auto
+//   display block
+
+
+div.relative
+  // position relative
+  // max-width 100px
+  min-height 100px
+  background #FF0000
+  // overflow auto
+  overflow: hidden
+  // margin-top 400px
+  // linear-gradient(#15A211,#158211,top)

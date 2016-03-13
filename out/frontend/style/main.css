@@ -1,0 +1,51 @@
+body {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 300;
+  color: #fff;
+  background: #159211;
+  overflow: auto;
+}
+a.button {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+}
+button {
+  background: #156211;
+  width: 80px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  border-width: 0px;
+  text-align: center;
+}
+input {
+  background: #156211;
+  width: 40px;
+  text-align: center;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  border-width: 0px;
+}
+form {
+  width: 500px;
+  padding: 10px;
+  text-align: right;
+}
+.rouletteApp {
+  overflow: auto;
+  /*background: #00f;*/
+}
+div.absolute {
+  position: absolute;
+  overflow: auto;
+}
+div.relative {
+  min-height: 100px;
+  /*background: #f00;*/
+  overflow: hidden;
+}
